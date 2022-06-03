@@ -25,15 +25,15 @@ function result() {
     newStory = newStory.replaceAll(':insertz:', zItem)
 
     if(customName.value !== '') {
-    const name = customName.value;
-    newStory = newStory.replaceAll('Bob', name)
+        const name = customName.value;
+        newStory = newStory.replaceAll('Bob', name)
     }
 
     if(document.getElementById("uk").checked) {
-    const weight = `${Math.round(300 * 0.0714286)} stone`;
-    const temperature =  `${Math.round((94 - 32) / 1.8)} centigrade`;
-    newStory = newStory.replaceAll('300 pounds', weight)
-    newStory = newStory.replaceAll('94 fahrenheit', temperature)
+        const weight = `${Math.round(300 * 0.0714286)} stone`;
+        const temperature =  `${Math.round((94 - 32) / 1.8)} centigrade`;
+        newStory = newStory.replaceAll('300 pounds', weight)
+        newStory = newStory.replaceAll('94 fahrenheit', temperature)
     }
 
     story.textContent = newStory;
